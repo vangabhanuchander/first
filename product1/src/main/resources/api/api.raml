@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: api
+/api/{employeeid}:
+  get:
+    queryParameters:
+      name:
+       required: true
+    responses:
+      200:
+        body:
+          application/json:
+            description: any
+            example: ! include bhanu.json
+              {"id":102,
+              "name":"bhanu",
+              "skill":"mulesoft",
+              "school":"vikas"
+              }
+

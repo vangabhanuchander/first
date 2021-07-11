@@ -1,0 +1,32 @@
+#%RAML 1.0
+title: Product
+/product/{employeeid}:
+  get:
+    
+    queryParameters:
+      skill:
+        required: true
+
+    responses:
+      200:
+        body:
+          application/json:
+            description: this is json
+            example: !include respget.json
+  post:
+    description: inserting the data
+    body:
+      application/json:
+        example: !include postrequest.json
+          
+    responses:
+            201:
+                    body:
+                            application/json:
+                                    example: !include postresp.json
+                                                 
+
+
+
+
+              
